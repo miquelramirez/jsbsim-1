@@ -28,7 +28,7 @@ find_package( PythonInterp )
 if( PYTHONINTERP_FOUND )
   get_filename_component( _python_path ${PYTHON_EXECUTABLE} PATH )
   find_program( CYTHON_EXECUTABLE
-    NAMES cython cython.bat
+    NAMES cython cython.bat cython3
     HINTS ${_python_path}
     )
 else()
@@ -42,4 +42,3 @@ include( FindPackageHandleStandardArgs )
 FIND_PACKAGE_HANDLE_STANDARD_ARGS( Cython REQUIRED_VARS CYTHON_EXECUTABLE )
 
 mark_as_advanced( CYTHON_EXECUTABLE )
-
