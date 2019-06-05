@@ -57,6 +57,7 @@ cdef extern from "models/FGAircraft.h" namespace "JSBSim":
     cdef cppclass c_FGAircraft "JSBSim::FGAircraft":
         c_FGAircraft(c_FGFDMExec* fdm)
         c_FGColumnVector3& GetXYZrp()
+        string GetAircraftName()
 
 cdef extern from "models/FGAtmosphere.h" namespace "JSBSim":
     cdef enum eTemperature "JSBSim::FGAtmosphere::eTemperature":

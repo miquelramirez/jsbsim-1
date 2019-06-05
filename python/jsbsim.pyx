@@ -17,6 +17,8 @@
 
 import os, platform, numpy
 
+from libcpp.string cimport string
+
 __version__='${PROJECT_VERSION}'
 
 cdef convertToNumpyMat(const c_FGMatrix33& m):
@@ -143,6 +145,9 @@ cdef class FGAircraft:
 
     def get_xyz_rp(self):
         return convertToNumpyVec(self.thisptr.GetXYZrp())
+
+    def get_aircraft_name(self):
+        return self.thisptr.GetAircraftName().decode('utf-8')
 
 cdef class FGAtmosphere:
 
