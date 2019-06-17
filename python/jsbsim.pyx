@@ -46,6 +46,9 @@ cdef class FGPropagate:
     def get_uvw(self):
         return convertToNumpyVec(self.thisptr.GetUVW())
 
+    def dump_state(self):
+        self.thisptr.DumpState()
+
 cdef class FGPropertyManager:
 
      cdef c_FGPropertyManager *thisptr

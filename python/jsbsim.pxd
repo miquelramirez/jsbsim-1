@@ -112,6 +112,7 @@ cdef extern from "models/FGPropagate.h" namespace "JSBSim":
         c_FGMatrix33& GetTl2b()
         c_FGMatrix33& GetTec2b()
         c_FGColumnVector3& GetUVW()
+        void DumpState()
 
 cdef extern from "models/FGPropulsion.h" namespace "JSBSim":
     cdef cppclass c_FGPropulsion "JSBSim::FGPropulsion":
