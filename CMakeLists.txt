@@ -43,7 +43,7 @@ option(BUILD_PYTHON_MODULE "Set to ON to build the Python module for JSBSim" ON)
 option(INSTALL_PYTHON_MODULE "Set to ON to install the Python module for JSBSim" OFF)
 
 if (BUILD_PYTHON_MODULE)
-  SET(Python_ADDITIONAL_VERSIONS 3 3.6 3.5)
+  SET(Python_ADDITIONAL_VERSIONS 3 3.5 3.6)
   list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/python/CMakeModules)
   find_package(Cython)
 
